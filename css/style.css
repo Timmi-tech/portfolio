@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 :root
 {
     --bg-black-900:#151515;
@@ -15,11 +15,28 @@ body.dark{
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
-body{
-    line-height: 1.5;
-    font-size: 16px;
-    font-family: 'Poppins' sans-serif;
+html {
+    scroll-behavior: smooth;
+}
 
+body{
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 } 
 *
 {
@@ -98,8 +115,10 @@ ul{
 .section-title h2{
     font-size: 40px;
     color: var(--text-black-900);
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
     position: relative;
+    letter-spacing: -0.02em;
 }
 .section-title h2::before{
     content: '';
@@ -130,6 +149,7 @@ ul{
 .btn{
     font-size: 16px;
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
     padding: 12px 35px;
     color: white;
     border-radius: 40px;
@@ -138,6 +158,7 @@ ul{
     white-space: nowrap;
     background-color: var(--skin-color);
     transition: all 0.3s ease;
+    letter-spacing: -0.01em;
 }
 .btn:hover{
     transform: scale(1.05);
@@ -181,8 +202,9 @@ ul{
 }
 
 .aside .logo a span{
-    font-family: 'Clicker Script', cursive;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 40px;
+    font-weight: 700;
 }
 
 .aside .logo ::before
@@ -281,12 +303,13 @@ ul{
 
 .aside .nav li a{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     display: block;
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900); 
     padding: 5px 15px;
-
+    letter-spacing: -0.01em;
 } 
 
 .aside .nav li a.active
@@ -312,24 +335,33 @@ ul{
     height: 5rem;
 }
 .home .home-info .social-media a{
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 8rem;
-    height: 8rem;
-    /* border: .2rem solid var(--skin-color);
-    border-radius: 50%; */
-    box-shadow: 0 0 20px rgba(48, 46, 77,0.15);
-    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--skin-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
     color: var(--skin-color);
-    margin: 2.5rem 1.5rem 3rem 0;
-    
+    margin: 0 10px 20px 0;
+    transition: all 0.3s ease;
+}
+
+.home .home-info .social-media a:hover{
+    background: var(--skin-color);
+    color: white;
+    transform: translateY(-3px);
 }
 h3.hello{
     font-size: 28px;
     margin: 15px 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 h3.hello span{
-    font-family: 'Clicker Script', cursive;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-color);
@@ -338,14 +370,20 @@ h3.hello span{
 h3.profession{
     font-size: 30px;
     margin: 15px 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 .typing{
     color: var(--skin-color);
 }
 .home-info p{
     margin-bottom: 40px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
     color: var(--text-black-700);
+    line-height: 1.7;
+    letter-spacing: -0.01em;
 }
 .home .home-img{
     flex: 0 0 40%;
@@ -402,8 +440,9 @@ h3.profession{
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
     color: var(--text-black-900);
-
+    letter-spacing: -0.01em;
 }
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
@@ -411,9 +450,10 @@ h3.profession{
 }
 .about .about-content .about-text p{
     font-size: 16px;
-    line-height: 25px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
     color: var(--text-black-700);
-
+    letter-spacing: -0.01em;
 }
 .about .about-content .personal-info{
     flex: 0 0 70%;
@@ -426,11 +466,13 @@ h3.profession{
     max-width: 50%;    
 }
 .about .about-content .personal-info .info-item p{
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     padding: 10px 0;
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
+    letter-spacing: -0.005em;
 }
 .about .about-content .personal-info .info-item p span{
     font-weight: 400;
@@ -456,11 +498,12 @@ h3.profession{
 }
 .about .about-content .skills .skill-item h5{
     line-height: 40px;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
     color: var(--text-black-900);
-    text-transform: capitalize;
-    
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 .about .about-content .skills .skill-item .progress{
     background-color: var(--bg-black-50);
@@ -608,14 +651,17 @@ h3.profession{
     font-size: 18px;
     margin-bottom: 15px;
     color: var(--text-black-900);
-    font-weight: 700;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
     text-transform: capitalize;
+    letter-spacing: -0.01em;
 }
 .service .service-item .service-item-inner p{
-    font-size: 16px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
     color: var(--text-black-700);
-    line-height: 25px;
-
+    line-height: 1.6;
+    letter-spacing: -0.01em;
 }
 /* portfolio */ 
 .portfolio .container{
@@ -645,20 +691,63 @@ h3.profession{
 }
 .portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
     transition: all 0.3S ease;
 } 
 .portfolio .portfolio-item .portfolio-item-inner h4{
-    font-size: 30px;
+    font-size: 20px;
     color: var(--text-black-900);
     font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
     text-transform: capitalize;
     text-align: center;
-    font-family: 'Clicker Script', cursive;
+    letter-spacing: -0.01em;
+    padding: 15px;
 }
 .portfolio .portfolio-item-inner .portfolio-img img:hover{
     box-shadow: 0 0 30px rgba(48, 46, 77,0.15);
 }
+/* testimonials */
+.testimonials .testimonial-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.testimonials .testimonial-item-inner{
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.testimonials .testimonial-item-inner:hover{
+    box-shadow: 0 0 30px rgba(48, 46, 77,0.15);
+    transform: translateY(-5px);
+}
+.testimonials .testimonial-text p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-black-700);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.testimonials .testimonial-author h4{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-black-900);
+    margin-bottom: 5px;
+}
+.testimonials .testimonial-author span{
+    font-size: 14px;
+    color: var(--skin-color);
+    font-weight: 500;
+}
+
 /* contact */
 .contact-title{
     color: var(--skin-color);
@@ -687,10 +776,12 @@ h3.profession{
 }
 .contact .contact-info-item h4{
     font-size: 18px;
-    font-weight: 700px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
     color: var(--text-black-900);
     text-transform: capitalize;
     margin: 15px 0 5px;
+    letter-spacing: -0.01em;
 }
 .contact .contact-info-item p{
     font-size: 16px;
@@ -786,6 +877,7 @@ h3.profession{
     .contact .contact-info-item, 
     .portfolio .portfolio-item,
     .service .service-item,
+    .testimonials .testimonial-item,
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .skills,

@@ -1,6 +1,6 @@
 /*  typng animation */
 var typed = new Typed(".typing", {
-    strings: ["", "Python Developer", "Django Developer", "Machine Learning Engineer", "Frontend Developer", "Backend Developer", "Full Stack Developer"],
+    strings: ["", "Backend Developer", ".NET Developer", "Django Developer", "Spring Boot Developer", "API Developer", "System Architect"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true
